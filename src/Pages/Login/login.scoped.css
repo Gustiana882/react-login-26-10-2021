@@ -1,0 +1,79 @@
+.bg {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    z-index: 0;
+}
+
+.screen {
+    width: 100vw;
+    min-height: 100vh;
+}
+.card {
+    width: 30vw;
+    height: 50vh;
+    padding: 3%;
+    margin: auto;
+    margin-top: 100px;
+    border-radius: 20px;
+    /* box-shadow: 2px 5px 10px 1px rgb(197, 197, 197); */
+    background-color: rgba(255, 255, 255, 0.6);
+}
+.input-group {
+    display: flex;
+    flex-direction: column;
+    margin-top: 15px;
+}
+
+.input-group label {
+    font-size: small;
+    font-weight: 600;
+    color: rgb(92, 92, 92);
+}
+
+.input-group input {
+    outline: none;
+    padding: 8px;
+    border-radius: 8px;
+    font-size: small;
+    background-color: rgb(236, 249, 255);
+    color:rgb(70, 70, 70);
+}
+
+.btn-form {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.btn-login {
+    background-color: rgb(0, 60, 255);
+    padding: 5px 40px;
+    font-size: smaller;
+    font-weight: 600;
+    color: #fff;
+    border-radius: 8px;
+    opacity: 0.8;
+}
+
+.btn-login:hover {
+    opacity: 1;
+    background-color: rgb(78, 119, 255);
+}
+
+.error {
+    color: red;
+    font-size: x-small;
+}
+
+@media screen and (max-width: 768px) {
+    .card {
+        width: 55vw;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .card {
+        width: 90vw;
+    }
+}

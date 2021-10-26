@@ -1,4 +1,4 @@
-import { useHistory } from "react-router-dom"
+import { useHistory, Redirect } from "react-router-dom"
 import { useSelector } from "react-redux"
 
 const withAuth = (WrappedComponent) => {
@@ -10,13 +10,11 @@ const withAuth = (WrappedComponent) => {
         const { token: accessToken } = useSelector((state) => state.users)
 
         if (accessToken && (Url === '/login' || Url === '/sign-up')) {
-            Router.push("/")
-            return null
+            return <Redirect to="/" />
         }
 
         if (!accessToken && !urlAuth.find((val, i)=> Url === val)) {
-            Router.push("/login")
-            return null
+            return <Redirect to="/login" />
         }
 
         return <WrappedComponent {...props} />
