@@ -1,4 +1,3 @@
-import React from 'react'
 import { useHistory } from 'react-router-dom'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
@@ -15,6 +14,7 @@ export const Home = (props) => {
         props.Logout()
         route.push('/login')
     }
+
     return (
         <div>
             <img className="bg" src={bg} alt="" />
@@ -25,6 +25,7 @@ export const Home = (props) => {
                 </div>
                 <div className="title">
                     <h1>Welcome Home</h1>
+                    <h1>{props.users.data.name}</h1>
                 </div>
             </div>
         </div>

@@ -30,7 +30,7 @@ const Login = (props) => {
         })
             .then(function ({ data }) {
                 props.AuthSet(data.access_token)
-                props.UserSet([{name: 'johndoe'}])
+                props.UserSet({ name: change.username })
                 route.push('/')
             })
             .catch(function (error) {
